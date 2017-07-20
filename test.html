@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dif_store</title><script src="js/jquery-3.2.1.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+<style>
+    td{
+        width: 10%;
+    }
+</style>
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <h3>测试table单元格宽度</h3>
+        <p>2017/07/20</p>
+        <div class="table-responsive">
+            <table class="table table-bordered" data-search="true">
+                <thead>
+                <tr>
+                    <th>itedadasdm1</th>
+                    <th>item2</th>
+                    <th>item3</th>
+                    <th>item4</th>
+                    <th>item5</th>
+                    <th>item6</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+                <tfoot>
+                
+                </tfoot>
+            </table>
+        </div>
+        <table id="table2" class="table table-bordered" data-search="true">
+            <tr>
+                <td>adwd</td>
+                <td> asdaasdaddad</td>
+                <td>daddasdad</td>
+                <td>dadadaddadadasd</td>
+                <td>das</td>
+                <td></td>
+            </tr>
+            
+        </table>
+
+
+
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        //调用本地html文件,并添加到网页中，样式可以利用原网页中的样式表，iframe是链接整个完整的网页，两者区别很大
+        $.get('test_ifram.html',function (content) {
+            $('#table2').after(content);
+            
+        });
+    })
+</script>
+</html>

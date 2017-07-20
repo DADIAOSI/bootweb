@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sgyh</title>
+    <script src="../../js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                事故隐患信息
+
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td colspan="6" class="text-center"><b>基本信息</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">企业自查</td>
+                            <td colspan="2">评价机构</td>
+                            <td colspan="2">政府督查</td>
+
+                        </tr>
+                        <tr>
+                            <td>部门</td>
+                            <td>企业安全部</td>
+                            <td>评价机构</td>
+                            <td>市场机构</td>
+                            <td>政府部门</td>
+                            <td>城市安全中心</td>
+                        </tr>
+                        <tr>
+                            <td >报告书编号</td>
+                            <td id="J1"></td>
+                            <td>报告书编号</td>
+                            <td id="J2"></td>
+                            <td>督查人</td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>检查时间</td>
+                            <td></td>
+                            <td>检查时间</td>
+                            <td></td>
+                            <td>检查时间</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="text-center"><b>隐患信息</b></td>
+                        </tr>
+                        <tr>
+                            <td>隐患名称</td>
+                            <td colspan="2"></td>
+                            <td>隐患编码</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>隐患类型</td>
+                            <td colspan="2"></td>
+                            <td>所属危险源</td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>隐患性质</td>
+                            <td colspan="2"></td>
+                            <td>隐患位置</td>
+                            <td colspan="2"></td>
+                        </tr>
+
+                    </table>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td colspan="6" class="text-center"><b>隐患危害形式</b></td>
+
+                        </tr>
+                        <tr>
+                            <td>导致事故物质名称</td>
+                            <td>氨气</td>
+                            <td>危害</td>
+                            <td>气体中毒</td>
+                            <td>可能的经济损失</td>
+                            <td>300万</td>
+                        </tr>
+                        <tr>
+                            <td>可能的伤亡人数</td>
+                            <td colspan="2">150人</td>
+                            <td>登记时间</td>
+                            <td colspan="2">2017/6/15</td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="6">隐患现状以及原因</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"></td>
+
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button type="button" class="btn btn-primary">get json</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $('button').click(function () {
+        alert("ok");
+        $.getJSON('sgyh.json',function (data) {
+            alert(data.BASE[0].J1);
+            $('#J1').html(data.BASE[0].J1);
+        })
+    })
+</script>
+</html>

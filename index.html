@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>基于无人机的危险源管理系统</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery-3.2.1.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootcss.css">
+
+<script src= "js/echarts.simple.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">
+ <script src="https://js.arcgis.com/4.4/"></script>
+
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		<span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">基于无人机的危险源管理系统</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#" data-target="#mymodal" data-toggle="modal">用户登录</a></li>
+            <li><a href="#">系统维护</a></li>
+            <li><a href="#">帮助</a></li>
+          </ul>
+        </div>	
+	</div>
+	
+</nav>
+<div class="modal fade" tabindex="-1" role="dialog" aria-describedby="mydialogmodal" id="mymodal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" aria-label="Close" data-dismiss="modal" >
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="mymodallabel">登录页面</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="name" class="control-label">用户名</label>
+						<input type="text" class="form-control" id="name">
+					</div>
+					<div class="form-group">
+						<label for="psd" class="control-label">密码</label>
+						<input type="password" class="form-control" id="psd">
+					</div>
+				</form>	
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary">确定</button>
+			</div>
+			
+		</div>
+		
+	</div> 
+	
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+          <div class="panel-group" id="accordin">
+          
+          	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseOne">
+					企业信息管理
+				</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body panelbodpad ">
+				<div class="list-group">
+				<a href="#" class="list-group-item active" onClick="opentab()">企业信息</a>
+				<a href="#" class="list-group-item">资质情况</a>
+				<a href="#" class="list-group-item">安全经费</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseTwo">
+					安全风险管理
+				</a>
+				
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body panelbodpad">
+				<div class="list-group">
+				<a href="#" class="list-group-item">周边风险源</a>
+				<a href="#" class="list-group-item">风险排查</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseThree">
+					事故隐患
+				</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body panelbodpad">
+			<div class="list-group">
+				<a href="#" class="list-group-item">隐患信息</a>
+				<a href="#" class="list-group-item">危险源目录</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+         	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseFore">
+					危险源监管
+				</a>
+			</h4>
+		</div>
+		<div id="collapseFore" class="panel-collapse collapse">
+			<div class="panel-body panelbodpad">
+				<div class="list-group">
+				<a href="#" class="list-group-item">危险品分类</a>
+				<a href="#" class="list-group-item">危险品目录</a>
+				<a href="#" class="list-group-item">危险化学品</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseFive">
+					无人机污染检测
+				</a>
+			</h4>
+		</div>
+		<div id="collapseFive" class="panel-collapse collapse">
+			<div class="panel-body panelbodpad">
+				<div class="list-group">
+				<a href="#" class="list-group-item">无人机数据采集</a>
+				<a href="#" class="list-group-item">历史数据</a>
+				<a href="#" class="list-group-item">数据管理</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseSix">
+					应急救援
+				</a>
+			</h4>
+		</div>
+		<div id="collapseSix" class="panel-collapse collapse">
+			<div class="panel-body panelbodpad">
+				<div class="list-group">
+				<a href="#" class="list-group-item">事故模拟</a>
+				<a href="#" class="list-group-item">伤亡损失拟算</a>
+				<a href="#" class="list-group-item">应急救援路线规划</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseSeven">
+					系统维护
+				</a>
+			</h4>
+		</div>
+		<div id="collapseSeven" class="panel-collapse collapse">
+			<div class="panel-body panelbodpad">
+				<div class="list-group">
+				<a href="#" class="list-group-item">数据备份</a>
+				<a href="#" class="list-group-item">数据导出</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+          	
+        </div>
+        
+	</div>
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    	<h1 class="page-header">详细信息</h1>
+    	<div class="container-fluid">
+    		
+    	
+    	<ul id="mytabs" class="nav nav-tabs">
+    		<li class="active"><a href="#souye" data-toggle="tab" >首页</a></li>
+    		<li><a href="#shuju" data-toggle="tab">数据显示</a></li>
+    		<li><a href="#charts" data-toggle="tab" onClick="loadchart()">表格统计</a></li>
+    		<li><a href="#map" data-toggle="tab">地图操作</a></li>
+    		<li><a href="#help" data-toggle="tab">帮助说明</a></li>
+    		
+    	</ul>
+    	<div id="mytabcontent" class="tab-content">
+    		<div class="tab-pane fade in  active" id="souye">
+    			<div class="panel panel-primary" >
+    				<div class="panel-heading">
+    					企业信息
+    				</div>
+    				<div class="panel-body">
+    					<!--<div class="row" id="qyxx">-->
+    						<!--<div class="col-lg-6" id="qiyexinxi">-->
+    							<!--<p class="text-muted">企业名称： <input type="text"  style="width: auto" value="绵阳XXXX" id="rt"></p>-->
+    							<!--<p class="text-muted">组织机构代码:<input type="text"  style="width: auto" value="绵阳XXXX"> </p>-->
+    							<!--<p class="text-muted">注册号：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">注册地址：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">上级主管部门：	<input type="text"  style="width: auto" value="绵阳XXXX"></p>														-->
+    							<!--<p class="text-muted">固定资产总值：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">年收入：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">总利润：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">占地面积：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">公司电话：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    						<!--</div>-->
+    						<!--<div class="col-lg-6">-->
+    							<!--<p class="text-muted">法定代表人： <input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">成立日期：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">行政区划代码：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">注册地址：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">登记注册类型：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">企业状态：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">经营范围：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">通讯地址：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">邮政编码：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!--<p class="text-muted">邮政编码：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
+    							<!---->
+    						<!--</div>-->
+    						<!--<p>-->
+    							<!--<button type="button" class="btn btn-primary" style="margin-left: 40%" id="bianji" >编辑</button>-->
+    							<!--<button type="button" class="btn btn-primary" id="save" >保存</button>-->
+
+    						<!--</p>-->
+    							<!---->
+    						<!---->
+    						<!---->
+    					<!--</div>-->
+						<div class="table-responsive">
+							<!--table-responsive 是让table样式在响应式布局中保持结构的正确性，添加左右滑动栏-->
+							<table class="table table-bordered">
+								<tr>
+									<td>企业名称</td>
+									<td>绵阳龙泉企业</td>
+									<td>组织机构代码</td>
+									<td>5120144582</td>
+								</tr>
+								<tr>
+									<td>注册号</td>
+									<td><input type="text" class="form-control"></td>
+									<td>注册地址</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>法定代表人</td>
+									<td></td>
+									<td>成立日期</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>行政区划代码</td>
+									<td></td>
+									<td>登记注册类型</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>经营范围</td>
+									<td></td>
+									<td>上级主管部门</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>固定资产总值</td>
+									<td></td>
+									<td>年收入</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>总利润</td>
+									<td></td>
+									<td>占地面积</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>通讯地址</td>
+									<td></td>
+									<td>邮政编码</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>公司电话</td>
+									<td colspan="3"></td>
+								</tr>
+							</table>
+
+							
+							
+						</div>
+    					
+    					
+    				</div>
+    			
+    			
+    			</div>
+    		</div>
+    		<div class="tab-pane fade" id="shuju">
+    			<h2 class="sub-header">数据表格</h2>
+    			<div class="table-responsive">
+    				<table class="table table-striped">
+    					<thead>
+    						<tr>
+    							<th>item1</th>
+    							<th>item1</th>
+    							<th>item1</th>
+    							<th>item1</th>
+    							<th>item1</th>
+    							
+    						</tr>
+    					</thead>
+    					<tbody>
+    						<tr>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>1,004</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>1,005</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>1,006</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>1,007</td>
+                  <td>sagittis</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>1,008</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+                <tr>
+                  <td>1,009</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                </tr>
+                <tr>
+                  <td>1,010</td>
+                  <td>massa</td>
+                  <td>Vestibulum</td>
+                  <td>lacinia</td>
+                  <td>arcu</td>
+                </tr>
+                <tr>
+                  <td>1,011</td>
+                  <td>eget</td>
+                  <td>nulla</td>
+                  <td>Class</td>
+                  <td>aptent</td>
+                </tr>
+                <tr>
+                  <td>1,012</td>
+                  <td>taciti</td>
+                  <td>sociosqu</td>
+                  <td>ad</td>
+                  <td>litora</td>
+                </tr>
+                <tr>
+                  <td>1,013</td>
+                  <td>torquent</td>
+                  <td>per</td>
+                  <td>conubia</td>
+                  <td>nostra</td>
+                </tr>
+                <tr>
+                  <td>1,014</td>
+                  <td>per</td>
+                  <td>inceptos</td>
+                  <td>himenaeos</td>
+                  <td>Curabitur</td>
+                </tr>
+                <tr>
+                  <td>1,015</td>
+                  <td>sodales</td>
+                  <td>ligula</td>
+                  <td>in</td>
+                  <td>libero</td>
+                </tr>
+    					</tbody>
+    					
+    				</table>
+    				
+    			</div>
+    		</div>
+    		<div class="tab-pane fade" id="charts">
+    			<h3>百度Echart</h3>
+    			<div style="height: 700px;;width: 1000px" id="chartview" >
+    				
+    			</div>
+    		</div>
+    		<div class="tab-pane fade" id="map">
+    			<div style="height: 760px;;width: 100%" id="mapview">
+    				
+    			</div>
+    		</div>
+    		<div class="tab-pane fade" id="help">
+    			<ul>
+                    <li>数据显示Tab是通过一些常用的label来显示企业的详细信息</li>
+                    <li>表格统计Tab是通过一些经过服务器处理的统计数据形成的表格数据，包括数据库中的源数据表，也可以利用chart图表进行绘制和显示折线图、饼状图等等</li>
+                    <li>查看地图Tab是用来进行企业地点、物资、危险源、事故模拟、救援路线规划等操作的视图，利用Arcgis API for javascript来进行地图上的操作</li>
+                    <li>帮助说明Tab是用来演示每一个子系统的操作过程，以及输入参数的说明</li>
+                    <li>左侧主要工具栏中需要进行参数设置的时候可以用两种方式进行输入
+                        <ul>
+                            <li>一种是弹出一个对话框进行信息输入</li>
+                            <li>在左侧边框的右边弹出一个DIV，在这其中进行参数输入</li>
+                        </ul>
+                    </li>
+                    <li>用到的JavaScript工具
+                        <ul>
+                            <li>easyUI框架，搭建网站页面布局和相关表格控件</li>
+                            <li>百度eCharts JavaScript，用来进行相关统计图表的显示，例如折线图、饼图、柱状图等等</li>
+                            <li>Arcgis API for JavaScript用来进行地图的显示和相关操作</li>
+                            <li>jQuery用来选择和操控网页DOM对象，表单数据的提交，以及动画效果的实现</li>
+                            <li>其他待定</li>
+                        </ul>
+                    </li>
+                    <li>图标引用问题：<strong>在data-options="iconCls:'icon-application-cascade'"中的icon-application-cascade对应的是icon.css文件中的样式，创建样式并引入图片，在data-options中就可以使用该样式名称了</strong></li>
+                </ul>
+                <ol>
+                    <h2>现阶段遇到的问题</h2>
+
+                    <li>页面的Ajax请求实现局部数据刷新</li>
+                    <li>利用Ajax请求获取数据库中的数据</li>
+                    <li>easyui-tree中<strong>子选项</strong>还不能自定义图标</li>
+                    <li>与服务器段的数据库交互，数据请求，数据传输文件格式还没有进行试验确定</li>
+                    <li>easyui中特定的JavaScript代码还未搞清楚</li>
+                    <li><strong>左侧功能区详细功能不详细</strong></li>
+                </ol>
+    		</div>
+    		</div>
+    		
+    	</div>
+    
+	</div>
+</div>
+	</div>
+</body>
+<script>
+	require([
+        "esri/Map",
+        "esri/views/MapView",
+        "dojo/domReady!"
+    ], function(Map, MapView){
+        var map = new Map({
+
+            basemap: "streets"
+        });
+
+        var view = new MapView({
+            container: "mapview",  // Reference to the scene div created in step 5
+            map: map,  // Reference to the map object created before the scene
+            zoom: 4,  // Sets zoom level based on level of detail (LOD)
+            center: [15,65]  // Sets center point of view using longitude,latitude
+        });
+    });
+	function opentab(){
+		$('#mytabs a:first').tab('show');
+	};
+	function loadchart(){
+		var myChart = echarts.init(document.getElementById('chartview'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+	}
+
+	$(document).ready(function(){
+		//
+		var $btn=$("#bianji");
+		var $input=$("#qyxx input");
+		$btn.click(function(){
+			if($input[0].hasAttribute("readonly")==false){
+				$input.addClass("inputlock").attr("readonly","readonly");
+				$btn.text("取消");
+			}else{
+				$input.removeClass("inputlock").removeAttr("readonly");
+				$btn.text("编辑");
+			}
+		});
+	})
+	
+		
+	
+</script>
+</html>
