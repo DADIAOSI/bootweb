@@ -9,10 +9,11 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootcss.css">
 
-<script src= "js/echarts.simple.min.js"></script>
+<!--<script src= "js/echarts.simple.min.js"></script>-->
 <script src="js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">
- <script src="https://js.arcgis.com/4.4/"></script>
+	<script src="js/myjs.js"></script>
+	<!--<link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">-->
+ <!--<script src="https://js.arcgis.com/4.4/"></script>-->
 
 
 
@@ -90,9 +91,9 @@
 		<div id="collapseOne" class="panel-collapse collapse">
 			<div class="panel-body panelbodpad ">
 				<div class="list-group">
-				<a href="#" class="list-group-item active" onClick="opentab()">企业信息</a>
-				<a href="#" class="list-group-item">资质情况</a>
-				<a href="#" class="list-group-item">安全经费</a>
+				<a id="tb1" href="#" class="list-group-item active" onClick="opentab()">企业信息</a>
+				<a id="tb2" href="#" class="list-group-item">资质情况</a>
+				<a id="tb3" href="#" class="list-group-item">安全经费</a>
 					
 				</div>
 			</div>
@@ -111,8 +112,8 @@
 		<div id="collapseTwo" class="panel-collapse collapse">
 			<div class="panel-body panelbodpad">
 				<div class="list-group">
-				<a href="#" class="list-group-item">周边风险源</a>
-				<a href="#" class="list-group-item">风险排查</a>
+				<a id="tb4" href="#" class="list-group-item">周边风险源</a>
+				<a id="tb5" href="#" class="list-group-item">风险排查</a>
 					
 				</div>
 			</div>
@@ -130,8 +131,8 @@
 		<div id="collapseThree" class="panel-collapse collapse">
 			<div class="panel-body panelbodpad">
 			<div class="list-group">
-				<a href="#" class="list-group-item">隐患信息</a>
-				<a href="#" class="list-group-item">危险源目录</a>
+				<a id="tb6" href="#" class="list-group-item">隐患信息</a>
+				<a id="tb7" href="#" class="list-group-item">危险源目录</a>
 					
 				</div>
 			</div>
@@ -149,9 +150,9 @@
 		<div id="collapseFore" class="panel-collapse collapse">
 			<div class="panel-body panelbodpad">
 				<div class="list-group">
-				<a href="#" class="list-group-item">危险品分类</a>
-				<a href="#" class="list-group-item">危险品目录</a>
-				<a href="#" class="list-group-item">危险化学品</a>
+				<a id="tb8" href="#" class="list-group-item">危险品分类</a>
+				<a id="tb9" href="#" class="list-group-item">危险品目录</a>
+				<a id="tb10" href="#" class="list-group-item">危险化学品</a>
 					
 				</div>
 			</div>
@@ -169,9 +170,9 @@
 		<div id="collapseFive" class="panel-collapse collapse">
 			<div class="panel-body panelbodpad">
 				<div class="list-group">
-				<a href="#" class="list-group-item">无人机数据采集</a>
-				<a href="#" class="list-group-item">历史数据</a>
-				<a href="#" class="list-group-item">数据管理</a>
+				<a id="tb11" href="#" class="list-group-item">无人机数据采集</a>
+				<a id="tb12"href="#" class="list-group-item">历史数据</a>
+				<a id="tb13"href="#" class="list-group-item">数据管理</a>
 					
 				</div>
 			</div>
@@ -189,9 +190,9 @@
 		<div id="collapseSix" class="panel-collapse collapse">
 			<div class="panel-body panelbodpad">
 				<div class="list-group">
-				<a href="#" class="list-group-item">事故模拟</a>
-				<a href="#" class="list-group-item">伤亡损失拟算</a>
-				<a href="#" class="list-group-item">应急救援路线规划</a>
+				<a id="tb14"href="#" class="list-group-item">事故模拟</a>
+				<a id="tb15"href="#" class="list-group-item">伤亡损失拟算</a>
+				<a id="tb16"href="#" class="list-group-item">应急救援路线规划</a>
 					
 				</div>
 			</div>
@@ -209,8 +210,8 @@
 		<div id="collapseSeven" class="panel-collapse collapse">
 			<div class="panel-body panelbodpad">
 				<div class="list-group">
-				<a href="#" class="list-group-item">数据备份</a>
-				<a href="#" class="list-group-item">数据导出</a>
+				<a id="tb17"href="#" class="list-group-item">数据备份</a>
+				<a id="tb18"href="#" class="list-group-item">数据导出</a>
 					
 				</div>
 			</div>
@@ -240,41 +241,6 @@
     					企业信息
     				</div>
     				<div class="panel-body">
-    					<!--<div class="row" id="qyxx">-->
-    						<!--<div class="col-lg-6" id="qiyexinxi">-->
-    							<!--<p class="text-muted">企业名称： <input type="text"  style="width: auto" value="绵阳XXXX" id="rt"></p>-->
-    							<!--<p class="text-muted">组织机构代码:<input type="text"  style="width: auto" value="绵阳XXXX"> </p>-->
-    							<!--<p class="text-muted">注册号：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">注册地址：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">上级主管部门：	<input type="text"  style="width: auto" value="绵阳XXXX"></p>														-->
-    							<!--<p class="text-muted">固定资产总值：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">年收入：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">总利润：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">占地面积：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">公司电话：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    						<!--</div>-->
-    						<!--<div class="col-lg-6">-->
-    							<!--<p class="text-muted">法定代表人： <input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">成立日期：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">行政区划代码：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">注册地址：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">登记注册类型：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">企业状态：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">经营范围：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">通讯地址：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">邮政编码：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!--<p class="text-muted">邮政编码：<input type="text"  style="width: auto" value="绵阳XXXX"></p>-->
-    							<!---->
-    						<!--</div>-->
-    						<!--<p>-->
-    							<!--<button type="button" class="btn btn-primary" style="margin-left: 40%" id="bianji" >编辑</button>-->
-    							<!--<button type="button" class="btn btn-primary" id="save" >保存</button>-->
-
-    						<!--</p>-->
-    							<!---->
-    						<!---->
-    						<!---->
-    					<!--</div>-->
 						<div class="table-responsive">
 							<!--table-responsive 是让table样式在响应式布局中保持结构的正确性，添加左右滑动栏-->
 							<table class="table table-bordered">
@@ -529,67 +495,51 @@
 	</div>
 </body>
 <script>
-	require([
-        "esri/Map",
-        "esri/views/MapView",
-        "dojo/domReady!"
-    ], function(Map, MapView){
-        var map = new Map({
+//	require([
+//        "esri/Map",
+//        "esri/views/MapView",
+//        "dojo/domReady!"
+//    ], function(Map, MapView){
+//        var map = new Map({
+//
+//            basemap: "streets"
+//        });
+//
+//        var view = new MapView({
+//            container: "mapview",  // Reference to the scene div created in step 5
+//            map: map,  // Reference to the map object created before the scene
+//            zoom: 4,  // Sets zoom level based on level of detail (LOD)
+//            center: [15,65]  // Sets center point of view using longitude,latitude
+//        });
+//    });
 
-            basemap: "streets"
-        });
+//	function loadchart(){
+//		var myChart = echarts.init(document.getElementById('chartview'));
+//
+//        // 指定图表的配置项和数据
+//        var option = {
+//            title: {
+//                text: 'ECharts 入门示例'
+//            },
+//            tooltip: {},
+//            legend: {
+//                data:['销量']
+//            },
+//            xAxis: {
+//                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+//            },
+//            yAxis: {},
+//            series: [{
+//                name: '销量',
+//                type: 'bar',
+//                data: [5, 20, 36, 10, 10, 20]
+//            }]
+//        };
+//
+//        // 使用刚指定的配置项和数据显示图表。
+//        myChart.setOption(option);
+//	}
 
-        var view = new MapView({
-            container: "mapview",  // Reference to the scene div created in step 5
-            map: map,  // Reference to the map object created before the scene
-            zoom: 4,  // Sets zoom level based on level of detail (LOD)
-            center: [15,65]  // Sets center point of view using longitude,latitude
-        });
-    });
-	function opentab(){
-		$('#mytabs a:first').tab('show');
-	};
-	function loadchart(){
-		var myChart = echarts.init(document.getElementById('chartview'));
-
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: 'ECharts 入门示例'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
-            },
-            xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-	}
-
-	$(document).ready(function(){
-		//
-		var $btn=$("#bianji");
-		var $input=$("#qyxx input");
-		$btn.click(function(){
-			if($input[0].hasAttribute("readonly")==false){
-				$input.addClass("inputlock").attr("readonly","readonly");
-				$btn.text("取消");
-			}else{
-				$input.removeClass("inputlock").removeAttr("readonly");
-				$btn.text("编辑");
-			}
-		});
-	})
 	
 		
 	
