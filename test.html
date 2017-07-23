@@ -83,6 +83,38 @@
             </div>
         </div>
         </div>
+        <form method="post" id="formtabel">
+            <table class="table table-bordered">
+                <!--form表单提交数据需要制定键和值，利用name属性进行关联-->
+                <tr>
+                    <td><label for="name" class="control-label" name="name">name</label></td>
+                    <td><input type="text" class="form-control" id="name" name="name"></td>
+                    <td><label for="psd" name="psd">psd</label></td>
+                    <td><input id="psd" type="password" class="form-control" name="psd"></td>
+                </tr>
+                <tr>
+                    <td><label for="sex" name="sex">sex</label></td>
+                    <td><input type="text" class="form-control" id="sex" name="sex"></td>
+                    <td><label for="age" name="age">age</label></td>
+                    <td><input id="age" class="form-control" type="text" name="age"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <label for="yu" class="control-label">name</label>
+            <input type="text" class="form-control" id="yu">
+            <button class="btn btn-primary btn-block" id="tjform" type="submit">提交form</button>
+        </form>
+        <form id="yuform" method="post" action="">
+            <label for="name2">name</label>
+            <input id="name2" class="form-control" type="text">
+            <input type="button" value="提交" id="btnform">
+        </form>
+
 
 
 
@@ -95,6 +127,17 @@
             $('#table2').after(content);
             
         });
+        $('#btnform').click(function () {
+//            var data=$('#formtabel').serialize();
+//            var data2=decodeURIComponent(data,true);
+//            alert(data2);
+            //$('#yu').val($('#yuform').serialize());
+            alert($('#yuform').serialize());
+        });
+        $('#formtabel').submit(function () {
+            alert($(this).serialize());
+            return false;
+        })
     })
 </script>
 </html>

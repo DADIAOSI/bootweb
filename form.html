@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<form action="">
+    <label for="name" name="name">name</label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="提价">
+</form>
+<p>ad</p>
+
+</body>
+<script>
+    $('form').submit(function () {
+        alert($('form').serialize());
+        $('p').text($('form').serialize());
+    })
+</script>
+</html>

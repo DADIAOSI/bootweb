@@ -12,19 +12,41 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-            隐患周边信息
+            <div class="btn-group btn-group-justified">
+                <!--此处上一页下一页对应的是不同的页面标题，点击后可以改变当前table内容-->
+                <a href="#" class="btn btn-default disabled">上一页</a>
+                <a href="#" class="btn btn-default">隐患周边信息</a>
+                <a href="#" class="btn btn-default">下一页</a>
+                <!--两者效果相同-->
+
+                <!--<div class="btn-group">-->
+                    <!--<button class="btn btn-default">12</button>-->
+                <!--</div>-->
+                <!--<div class="btn-group">-->
+                    <!--<button class="btn btn-default">34</button>-->
+                <!--</div>-->
+                <!--<div class="btn-group">-->
+                    <!--<button class="btn btn-default">56</button>-->
+                <!--</div>-->
+
+
+            </div>
+
         </div>
         <div class="panel-body">
             <div class="table-responsive">
                 <!--其他危险源table-->
+                <!--此处可以表单提交方法：1,页面加载时将tabel添加到form标签中；2,点击编辑提交时添加form-->
+                <form method="post">
                 <table class="table table-bordered">
                     <tr>
                         <td colspan="6">其他危险源</td>
 
                     </tr>
                     <tr>
-                        <td>危险源名称</td>
-                        <td></td>
+                        <!--td标签中插入label和input标签-->
+                        <td><label for="dname"></label>危险源名称</td>
+                        <td><input type="text" class="form-control" id="dname"></td>
                         <td>所属单位</td>
                         <td></td>
                         <td>造成危害物质</td>
@@ -52,6 +74,7 @@
                     </tr>
 
                 </table>
+                </form>
                 <!--周边环境table-->
                 <table class="table table-bordered">
                     <tr>
