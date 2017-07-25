@@ -6,7 +6,7 @@ $("a[class='thumbnail']").click(function () {
     var $wxpflid=$(this).attr('id');            //判断点击的分类图标按钮，再通过Ajax进行网页局部加载
     switch ($wxpflid){
         case 'cgq':
-            addtab();
+            tabshow();
             break;
         case 'kq':
             break;
@@ -31,14 +31,9 @@ $("a[class='thumbnail']").click(function () {
     function wxpflajax() {
         $.get()
     };
-    function addtab() {
-        var newtabhtml="<li><a href='#"+$wxpflid+"' data-toggle='tab' >当前危险品分类tab</a></li>";
-        $('#mytabs').append(newtabhtml);
-        var newtabcontent="<div class='tab-pane fade' id='"+$wxpflid+"'><h2>tabcontent</h2></div>"
-        alert(newtabcontent);
-        $('#mytabcontent').append(newtabcontent);
-        $('#mytabs :last').tab('show');s
-
+    function tabshow() {
+       $('#Addtabli').removeClass('hidden');
+       alert('ok');
     };
 });
 
