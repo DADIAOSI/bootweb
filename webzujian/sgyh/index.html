@@ -10,12 +10,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="panel panel-default">
+        <div class="panel panel-primary">
             <div class="panel-heading">
                 事故隐患信息
 
             </div>
             <div class="panel-body">
+                <div  class="btn-group btn-group-justified">
+                    <!--此处a标签不需要href属性链接导航-->
+                    <a id="pre" class="btn btn-default"><span class="glyphicon glyphicon-step-backward"></span>资质变更</a>
+                    <a id="cur" class="btn btn-default">现有资质</a>
+                    <a id="next" class="btn btn-default">资质申请<span class="glyphicon glyphicon-step-forward"></span></a>
+                </div>
+                <br>
+
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
@@ -105,17 +113,21 @@
                     </table>
 
                 </div>
+                <div class="btn-group btn-group-justified">
+                    <a id="getjson" class="btn btn-primary">获取json数据</a>
+
+                </div>
             </div>
             <div class="panel-footer">
-                <button type="button" class="btn btn-primary">get json</button>
+                <p>其他信息</p>
             </div>
         </div>
     </div>
 
 </body>
 <script>
-    $('button').click(function () {
-        alert("ok");
+    $('#getjson').click(function () {
+        alert("通过Ajax获取数据");
         $.getJSON('sgyh.json',function (data) {
             alert(data.BASE[0].J1);
             $('#J1').html(data.BASE[0].J1);

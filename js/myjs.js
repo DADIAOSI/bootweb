@@ -5,14 +5,17 @@ function opentab(){
     $('#mytabs a:first').tab('show');
 };
 $(document).ready(function(){
-    var $item=$('a[id^="tb"]');
+    var $item=$('.list-group-item');
     $item.click(function () {
         $('#mytabs a:first').tab('show');//显示第一个tab
-        $.get('usableHtmlfreg/qyxx/qyxx.html',function (data) {       //通过ajax获取HTML代码，清空tab中HTML代码并添加当前获取的HTML代码
+        var $id=$(this).attr('id');
+        $.get('usableHtmlfreg/'+$id+'.html',function (data) {       //通过ajax获取HTML代码，清空tab中HTML代码并添加当前获取的HTML代码
             $('#souye').empty().append(data);
-            $.getScript('js/loadjs.js',function (data2) {            //同理，通过Ajax获取JavaScript代码，并加载到网页中,
+            $.getScript('js/'+$id+'.js',function (data2) {            //同理，通过Ajax获取JavaScript代码，并加载到网页中,
                                                                         //此处如果连续点击，会请求相同数据并加载，造成数据冗余,暂无解决方法
-                alert(data2);
+                //alert($id);
+            }).fail(function () {
+                alert('error');
             })
         });
         $item.removeClass('active');                    //移除所有项的样式
@@ -23,4 +26,5 @@ $(document).ready(function(){
         // })
 
     });
+
 })

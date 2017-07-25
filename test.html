@@ -114,6 +114,153 @@
             <input id="name2" class="form-control" type="text">
             <input type="button" value="提交" id="btnform">
         </form>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>item1</th>
+                    <th>item1</th>
+                    <th>item1</th>
+                    <th>item1</th>
+                    <th>item1</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1,001</td>
+                    <td>Lorem</td>
+                    <td>ipsum</td>
+                    <td>dolor</td>
+                    <td>sit</td>
+                </tr>
+                <tr>
+                    <td>1,002</td>
+                    <td>amet</td>
+                    <td>consectetur</td>
+                    <td>adipiscing</td>
+                    <td>elit</td>
+                </tr>
+                <tr>
+                    <td>1,003</td>
+                    <td>Integer</td>
+                    <td>nec</td>
+                    <td>odio</td>
+                    <td>Praesent</td>
+                </tr>
+                <tr>
+                    <td>1,003</td>
+                    <td>libero</td>
+                    <td>Sed</td>
+                    <td>cursus</td>
+                    <td>ante</td>
+                </tr>
+                <tr>
+                    <td>1,004</td>
+                    <td>dapibus</td>
+                    <td>diam</td>
+                    <td>Sed</td>
+                    <td>nisi</td>
+                </tr>
+                <tr>
+                    <td>1,005</td>
+                    <td>Nulla</td>
+                    <td>quis</td>
+                    <td>sem</td>
+                    <td>at</td>
+                </tr>
+                <tr>
+                    <td>1,006</td>
+                    <td>nibh</td>
+                    <td>elementum</td>
+                    <td>imperdiet</td>
+                    <td>Duis</td>
+                </tr>
+                <tr>
+                    <td>1,007</td>
+                    <td>sagittis</td>
+                    <td>ipsum</td>
+                    <td>Praesent</td>
+                    <td>mauris</td>
+                </tr>
+                <tr>
+                    <td>1,008</td>
+                    <td>Fusce</td>
+                    <td>nec</td>
+                    <td>tellus</td>
+                    <td>sed</td>
+                </tr>
+                <tr>
+                    <td>1,009</td>
+                    <td>augue</td>
+                    <td>semper</td>
+                    <td>porta</td>
+                    <td>Mauris</td>
+                </tr>
+                <tr>
+                    <td>1,010</td>
+                    <td>massa</td>
+                    <td>Vestibulum</td>
+                    <td>lacinia</td>
+                    <td>arcu</td>
+                </tr>
+                <tr>
+                    <td>1,011</td>
+                    <td>eget</td>
+                    <td>nulla</td>
+                    <td>Class</td>
+                    <td>aptent</td>
+                </tr>
+                <tr>
+                    <td>1,012</td>
+                    <td>taciti</td>
+                    <td>sociosqu</td>
+                    <td>ad</td>
+                    <td>litora</td>
+                </tr>
+                <tr>
+                    <td>1,013</td>
+                    <td>torquent</td>
+                    <td>per</td>
+                    <td>conubia</td>
+                    <td>nostra</td>
+                </tr>
+                <tr>
+                    <td>1,014</td>
+                    <td>per</td>
+                    <td>inceptos</td>
+                    <td>himenaeos</td>
+                    <td>Curabitur</td>
+                </tr>
+                <tr>
+                    <td>1,015</td>
+                    <td>sodales</td>
+                    <td>ligula</td>
+                    <td>in</td>
+                    <td>libero</td>
+                </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        <ul id="navtab" class="nav nav-tabs">
+            <li><a href="#tab1" data-toggle="tab">tab1</a></li>
+            <li><a href="#tab2" data-toggle="tab">tab2</a></li>
+            <li><a id="navtab3" href="#tab3" data-toggle="tab" class="hidden">tab3</a></li>
+        </ul>
+        <div id="tabcontent" class="tab-content">
+            <div id="tab1" class="tab-pane fade in active">
+                <h3>tab1</h3>
+                <button id="addnewtab" type="button" class="btn btn-primary">Add new tab</button>
+            </div>
+            <div id="tab2" class="tab-pane fade">
+                <h3>tab2</h3>
+            </div>
+            <div id="tab3" class="tab-pane fade">
+                <h3>tab3</h3>
+            </div>
+        </div>
 
 
 
@@ -138,7 +285,16 @@
         $('#formtabel').submit(function () {
             alert($(this).serialize());
             return false;
-        })
+        });
+        $('#addnewtab').click(function () {
+            var a="<li><a id='last' href='#tab4' data-toggle='tab'>tab4</a></li>";
+            var b="<div id='tab3' class='tab-pane fade'></div>";
+            $('#navtab').append(a);
+            $('#tabcontent').append(b);
+            $('#navtab3').removeClass('hidden');
+            alert("tab4按钮不能打开对应的tab,暂不清楚原因,也许是需要页面最初加载时绑定,但是可以事先Hidden一个tab,之后让其显示");
+        });
+
     })
 </script>
 </html>
