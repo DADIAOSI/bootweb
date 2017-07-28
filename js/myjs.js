@@ -21,7 +21,7 @@ $(document).ready(function(){
         $item.removeClass('active');                    //移除所有项的样式
         $(this).addClass('active');                     //给当前选中项添加样式
         alert($(this).attr('id'));
-        // $.get('webzujian/qyzz/index.html',function (data) {
+        // $.get('网页界面测试代码/qyzz/index.html',function (data) {
         //     alert(data);
         // })
 
