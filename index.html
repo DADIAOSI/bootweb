@@ -227,19 +227,18 @@
     	
     	<ul id="mytabs" class="nav nav-tabs">
     		<li class="active"><a href="#souye" data-toggle="tab" >首页</a></li>
-			<li><a href="#Addtabcontent" id="Addtabli" class="hidden" data-toggle="tab">addtab</a></li>
-    		<li><a href="#shuju" data-toggle="tab">数据显示</a></li>
-    		<li><a href="#charts" data-toggle="tab">表格统计</a></li>
-    		<li><a href="#map" data-toggle="tab">地图操作</a></li>
-    		<li><a href="#help" data-toggle="tab">帮助说明</a></li>
+			<!--<li><a href="#Addtabcontent" id="Addtabli" class="hidden" data-toggle="tab">addtab<span class="glyphicon glyphicon-remove"></span></a></li>-->
+    		<li><a href="#shuju" data-toggle="tab">数据显示<span class="glyphicon glyphicon-remove"></span></a></li>
+    		<li><a href="#charts" data-toggle="tab">表格统计<span class="glyphicon glyphicon-remove"></span></a></li>
+    		<li><a href="#map" data-toggle="tab">地图操作<span class="glyphicon glyphicon-remove"></span></a></li>
+    		<li><a href="#help" data-toggle="tab">帮助说明<span class="glyphicon glyphicon-remove"></span></a></li>
+
+
 
     		
     	</ul>
     	<div id="mytabcontent" class="tab-content">
-			<div id="Addtabcontent" class="tab-pane fade">
-				<h3>Addtabcontent</h3>
 
-			</div>
     		<div class="tab-pane fade in  active" id="souye">
     			<div class="panel panel-primary" >
     				<div class="panel-heading">
@@ -352,7 +351,7 @@
                     <li>利用Ajax请求获取数据库中的数据</li>
                     <li>easyui-tree中<strong>子选项</strong>还不能自定义图标</li>
                     <li>与服务器段的数据库交互，数据请求，数据传输文件格式还没有进行试验确定</li>
-                    <li>easyui中特定的JavaScript代码还未搞清楚</li>
+                    <li>动态加载的HTML必须从新绑定JavaScript事件,也就是页面初始化后DOM绑定的事件是可以的，但是之后动态加载的DOM的绑定事件必须从新绑定（解决办法：）</li>
                     <li><strong>左侧功能区详细功能不详细</strong></li>
                 </ol>
     		</div>

@@ -20,10 +20,24 @@ $(document).ready(function(){
         });
         $item.removeClass('active');                    //移除所有项的样式
         $(this).addClass('active');                     //给当前选中项添加样式
-        alert($(this).attr('id'));
+        //alert($(this).attr('id'));
         // $.get('网页界面测试代码/qyzz/index.html',function (data) {
         //     alert(data);
         // })
+
+    });
+    //关闭标签页
+    $('#mytabs span:gt(2)').click(function () {          //判断tab>span图标索引大于3的可以删除，前面的不可以，以后要插入tab时必须要插入到最后
+        alert("close?"+$(this).parent().parent().index());//获取当前点击的tab索引
+        var $removetabindex=$(this).parent().parent().index();
+        var $removetab=$('#mytabs li:eq('+$removetabindex+')');
+        $removetab.remove();        //找到这个父DOM为li并且索引为$removetab的节点并移除
+        //alert($removetab.children('a').attr('href'));
+        var $href=$removetab.children('a').attr('href');       //找到其与起对应的tabcontent的id
+        //alert($href.split('#')[1]+typeof ($href));
+        $('#mytabcontent>div[id='+$href.split('#')[1]+']').remove();//找到对应的tabcontent并移除
+        // var $removetabcontent=$('#')
+        // $removetabcontent.remove();
 
     });
 
