@@ -50,6 +50,10 @@ $("a[class='thumbnail']").click(function () {
             $('#mytabs').append(html_tabname);
             $('#mytabcontent').append(html_tabcontent);
             $('#mytabs li:last a').tab('show');
+            $.get('usableHtmlfreg/wxpfl/cgq.html',function (data) {
+                $('#'+tabname+'').empty().append(data);
+                // alert('ok!');
+            });
         }
 
     }

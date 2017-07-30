@@ -15,7 +15,7 @@ $(document).ready(function(){
                                                                         //此处如果连续点击，会请求相同数据并加载，造成数据冗余,暂无解决方法
                 //alert($id);
             }).fail(function () {
-                alert('error');
+                alert($id+'.js loading error! or not the file!');
             })
         });
         $item.removeClass('active');                    //移除所有项的样式

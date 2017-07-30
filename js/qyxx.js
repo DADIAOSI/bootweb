@@ -6,15 +6,17 @@ $('#tijiao').click(function () {
     //提交表单汉子显示不明白，
     alert(data);
 });
+$('#formqyxx input').attr("readonly","readonly").css({"box-shadow": "none","background-color": "#fff","border": "none"});//事先指定为readonly状态
 $('#xiugai').click(function () {
     var $inputforro=$('#formqyxx input');
     var $bool=$inputforro.attr("readonly");
+
     if($bool=='readonly')                  //判断是否可读，切换可读状态，进行编辑，
     {
-        $inputforro.removeAttr("readonly");
+        $inputforro.removeAttr("readonly").removeAttr('style');
     }
     else {
-        $inputforro.attr("readonly","readonly");
+        $inputforro.attr("readonly","readonly").css({"box-shadow": "none","background-color": "#fff","border": "none"});
     };
 
 });
