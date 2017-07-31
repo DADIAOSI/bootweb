@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="../../js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            事故隐患
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation" class="active"><a href="#item1" data-toggle="tab">事故隐患信息</a></li>
+                <li role="presentation"><a href="#item2" data-toggle="tab">周边环境</a></li>
+                <li role="presentation"><a href="#item3" data-toggle="tab">地图显示</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="item1" class="tab-pane fade active in">
+                    <div class="table-responsive">
+                        <form>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td colspan="6" class="text-center"><b>基本信息</b></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">企业自查</td>
+                                    <td colspan="2">评价机构</td>
+                                    <td colspan="2">政府督查</td>
+
+                                </tr>
+                                <tr>
+                                    <td>部门</td>
+                                    <td><input type="text"  class="form-control" value="企业安全部" name=""></td>
+                                    <td>评价机构</td>
+                                    <td><input class="form-control" value="" name="" type="text"></td>
+                                    <td>政府部门</td>
+                                    <td><input class="form-control" value="" name="" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td >报告书编号</td>
+                                    <td id="J1"><input class="form-control" value="" name="" type="text"></td>
+                                    <td>报告书编号</td>
+                                    <td id="J2"><input class="form-control" value="" name="" type="text"></td>
+                                    <td>督查人</td>
+                                    <td><input class="form-control" value="" name="" type="text"></td>
+
+                                </tr>
+                                <tr>
+                                    <td>检查时间</td>
+                                    <td><input class="form-control" value="" name="" type="date"></td>
+                                    <td>检查时间</td>
+                                    <td><input class="form-control" value="" name="" type="date"></td>
+                                    <td>检查时间</td>
+                                    <td><input class="form-control" value="" name="" type="date"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="text-center"><b>隐患信息</b></td>
+                                </tr>
+                                <tr>
+                                    <td>隐患名称</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
+                                    <td>隐患编码</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>隐患类型</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
+                                    <td>所属危险源</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>隐患性质</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
+                                    <td>隐患位置</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
+                                </tr>
+
+                            </table>
+                        </form>
+                    </div>
+                    <div class="table-responsive">
+                        <form>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td colspan="6" class="text-center"><b>隐患危害形式</b></td>
+
+                                </tr>
+                                <tr>
+                                    <td>导致事故物质名称</td>
+                                    <td><input class="form-control" value="" name="" type="text"></td>
+                                    <td>危害</td>
+                                    <td><input class="form-control" value="" name="" type="text"></td>
+                                    <td>可能的经济损失</td>
+                                    <td><input class="form-control" value="" name="" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>可能的伤亡人数</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
+                                    <td>登记时间</td>
+                                    <td colspan="2"><input class="form-control" value="" name="" type="date"></td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="6">隐患现状以及原因</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6"><textarea class="form-control" rows="6"></textarea></td>
+
+                                </tr>
+                            </table>
+                        </form>
+                            <div id="edtbbtn" class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button">首页</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button">末页</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                <div id="item2" class="tab-pane fade">
+                    <div class="table-responsive">
+                        <!--其他危险源table-->
+                        <!--此处可以表单提交方法：1,页面加载时将tabel添加到form标签中；2,点击编辑提交时添加form-->
+                        <form method="post">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td colspan="6">其他危险源</td>
+
+                                </tr>
+                                <tr>
+                                    <!--td标签中插入label和input标签-->
+                                    <td><label for="dname"></label>危险源名称</td>
+                                    <td><input type="text" class="form-control" id="dname"></td>
+                                    <td>所属单位</td>
+                                    <td></td>
+                                    <td>造成危害物质</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>危害形式</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>数量（吨）</td>
+                                    <td><input type="text" class="form-control" readonly></td>
+                                    <td>距灾害中心距离（米）</td>
+                                    <td><input type="text" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">其他单位</td>
+
+                                </tr>
+                                <tr>
+                                    <td>单位名称</td>
+                                    <td></td>
+                                    <td>单位行业</td>
+                                    <td></td>
+                                    <td>距离隐患中心距离</td>
+                                    <td></td>
+                                </tr>
+
+                            </table>
+                        </form>
+                        <div id="edtbbtn2" class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">首页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">末页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                            </div>
+                        </div>
+                        <!--周边环境table-->
+                        <form>
+                        <table class="table table-bordered">
+                            <tr>
+                                <td colspan="6"> 周边环境</td>
+
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>住宅区</td>
+                                <td>机关团体</td>
+                                <td>公共场所</td>
+                                <td>重要建筑</td>
+                                <td>其他</td>
+                            </tr>
+                            <tr>
+                                <td>数量</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>人数</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>距隐患中心距离</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        </form>
+                        <div id="edtbbtn3" class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">首页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">末页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="item3" class="tab-pane fade">
+                    item3
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

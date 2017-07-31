@@ -4,20 +4,61 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <script src="js/bootstrap-table.min.js"></script>
 </head>
 <body>
+<div class="container">
+
+
 <form action="">
-    <label for="name" name="name">name</label>
+    <label for="name" >name</label>
     <input type="text" id="name" name="name">
+    <input type="email">
+    <input type="color">
+    <input type="date" value="2017/8/21">
     <input type="submit" value="提价">
 </form>
-<p>ad</p>
 
+<p>ad</p>
+    <table id="table" data-toggle="table">
+        <thead>
+            <th data-field="id">id</th>
+            <th data-field="name">name</th>
+            <th data-field="age">age</th>
+        </thead>
+    </table>
+    <div class="table-responsive">
+        <table id="mytable" class="table table-hover">
+
+        </table>
+        <button id="button" type="button" class="btn btn-primary">loaddata</button>
+    </div>
+
+</div>
 </body>
 <script>
     $('form').submit(function () {
         alert($('form').serialize());
         $('p').text($('form').serialize());
     })
+    $('#table').bootstrapTable({
+//        data:[{
+//            "id":1,
+//            "name":"yujin",
+//            "age":35
+//        }, {
+//            "id":1,
+//            "name":"yujin",
+//            "age":35
+//        }]
+        url:"img/ajax.json"
+    });
+    $('#button').click(function () {
+
+    })
+
 </script>
 </html>

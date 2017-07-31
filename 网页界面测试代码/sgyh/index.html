@@ -25,6 +25,9 @@
                 <br>
 
                 <div class="table-responsive">
+                    <form>
+
+
                     <table class="table table-bordered">
                         <tr>
                             <td colspan="6" class="text-center"><b>基本信息</b></td>
@@ -37,49 +40,49 @@
                         </tr>
                         <tr>
                             <td>部门</td>
-                            <td>企业安全部</td>
+                            <td><input type="text"  class="form-control" value="企业安全部" name=""></td>
                             <td>评价机构</td>
-                            <td>市场机构</td>
+                            <td><input class="form-control" value="" name="" type="text"></td>
                             <td>政府部门</td>
-                            <td>城市安全中心</td>
+                            <td><input class="form-control" value="" name="" type="text"></td>
                         </tr>
                         <tr>
                             <td >报告书编号</td>
-                            <td id="J1"></td>
+                            <td id="J1"><input class="form-control" value="" name="" type="text"></td>
                             <td>报告书编号</td>
-                            <td id="J2"></td>
+                            <td id="J2"><input class="form-control" value="" name="" type="text"></td>
                             <td>督查人</td>
-                            <td></td>
+                            <td><input class="form-control" value="" name="" type="text"></td>
 
                         </tr>
                         <tr>
                             <td>检查时间</td>
-                            <td></td>
+                            <td><input class="form-control" value="" name="" type="date"></td>
                             <td>检查时间</td>
-                            <td></td>
+                            <td><input class="form-control" value="" name="" type="date"></td>
                             <td>检查时间</td>
-                            <td></td>
+                            <td><input class="form-control" value="" name="" type="date"></td>
                         </tr>
                         <tr>
                             <td colspan="6" class="text-center"><b>隐患信息</b></td>
                         </tr>
                         <tr>
                             <td>隐患名称</td>
-                            <td colspan="2"></td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
                             <td>隐患编码</td>
-                            <td colspan="2"></td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
                         </tr>
                         <tr>
                             <td>隐患类型</td>
-                            <td colspan="2"></td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
                             <td>所属危险源</td>
-                            <td colspan="2"></td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
                         </tr>
                         <tr>
                             <td>隐患性质</td>
-                            <td colspan="2"></td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
                             <td>隐患位置</td>
-                            <td colspan="2"></td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
                         </tr>
 
                     </table>
@@ -90,27 +93,35 @@
                         </tr>
                         <tr>
                             <td>导致事故物质名称</td>
-                            <td>氨气</td>
+                            <td><input class="form-control" value="" name="" type="text"></td>
                             <td>危害</td>
-                            <td>气体中毒</td>
+                            <td><input class="form-control" value="" name="" type="text"></td>
                             <td>可能的经济损失</td>
-                            <td>300万</td>
+                            <td><input class="form-control" value="" name="" type="text"></td>
                         </tr>
                         <tr>
                             <td>可能的伤亡人数</td>
-                            <td colspan="2">150人</td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="text"></td>
                             <td>登记时间</td>
-                            <td colspan="2">2017/6/15</td>
+                            <td colspan="2"><input class="form-control" value="" name="" type="date"></td>
 
                         </tr>
                         <tr>
                             <td colspan="6">隐患现状以及原因</td>
                         </tr>
                         <tr>
-                            <td colspan="6"></td>
+                            <td colspan="6"><textarea class="form-control" rows="6"></textarea></td>
 
                         </tr>
                     </table>
+                        <table class="table table-bordered hidden">
+                            <tr>
+                                <td>item1</td>
+                                <td>item2</td>
+                                <td>item3</td>
+                            </tr>
+                        </table>
+                    </form>
 
                 </div>
                 <div class="btn-group btn-group-justified">
@@ -132,6 +143,13 @@
             alert(data.BASE[0].J1);
             $('#J1').html(data.BASE[0].J1);
         })
+    });
+    $('#pre').click(function () {
+        var $table=$('table');
+        alert($table[0]);
+
+        $('table:lt(2)').addClass('hidden');
+
     })
 </script>
 </html>
