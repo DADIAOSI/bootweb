@@ -15,6 +15,186 @@
 </head>
 <body>
 <div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            安全经费
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a href="#one" data-toggle="tab">安全经费投入情况</a></li>
+                <li><a href="#two" data-toggle="tab">安全经费使用情况</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="one" class="tab-pane fade active in">
+                    <div class="table-responsive" style="padding-top: 10px">
+                        <table class="table table-bordered" >
+                            <tbody>
+                            <tr>
+                                <td rowspan="8">项目验收情况</td>
+                                <td rowspan="2">安全预评价</td>
+                                <td>预评价结论</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>评价时间</td>
+                                <td><input type="date" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>评价单位</td>
+                                <td colspan="3"><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">项目审批</td>
+                                <td>预评价备案结论</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>预评价备案时间</td>
+                                <td><input type="date" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>预评价备案单位</td>
+                                <td colspan="3"><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">初步设计审查</td>
+                                <td>安全投入概算</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>设计时间</td>
+                                <td><input type="date" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>设计单位</td>
+                                <td colspan="3"><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">安全验收</td>
+                                <td>验收结论</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>验收时间</td>
+                                <td><input type="date" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>实际投入金额</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>验收单位</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div id="edtbbtn" class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">首页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">末页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="two" class="tab-pane">
+                    <div class="table-responsive" style="padding-top: 10px">
+                        <table class="table table-bordered" >
+                            <tbody>
+                                <tr>
+                                    <td>投入编号</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>投入年度</td>
+                                    <td><input type="date" class="form-control" name=""></td>
+                                    <td>投入资金概算</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                </tr>
+                                <tr>
+                                    <td>同期年总收入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>投入提取方式</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+
+                                </tr>
+                                <tr>
+                                    <td>工艺改造投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>安全评价投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>劳保用品投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                </tr>
+                                <tr>
+                                    <td>安全教育投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>隐患整改投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>安全科研投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                </tr>
+                                <tr>
+                                    <td>安全技改投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>其他安全投入</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                    <td>年度安全投入总额</td>
+                                    <td><input type="text" class="form-control" name=""></td>
+                                </tr>
+                                <tr>
+                                    <td>经费投入自我评价</td>
+                                    <td colspan="5"><textarea class="form-control"></textarea></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div id="edtbbtn2" class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">首页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">末页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <h2>安全经费</h2>
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -95,6 +275,7 @@
 
         </div>
     </div>
+
 
 
 </div>

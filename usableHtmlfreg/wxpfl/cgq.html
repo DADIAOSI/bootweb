@@ -1,5 +1,5 @@
 <br>
-<ul class="nav nav-tabs">
+<ul class="nav nav-pills nav-justified">
     <li class="active"><a href="#one" data-toggle="tab">储罐区信息</a></li>
     <li><a href="#two" data-toggle="tab">储罐区周边环境信息</a></li>
     <li><a href="#three" data-toggle="tab">罐区地图</a></li>
@@ -7,7 +7,7 @@
 </ul>
 <div class="tab-content">
     <div id="one" class="tab-pane fade in active">
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
             <div class="panel-heading">
                 贮罐区基本信息
             </div>
@@ -36,7 +36,12 @@
                         </tr>
                         <tr>
                             <td>罐区面积</td>
-                            <td><input class="form-control" type="text" value="320m^2" name=""></td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="form-control" type="text" value="320" name="">
+                                    <span class="input-group-addon">M^2(平方米)</span>
+                                </div>
+                            </td>
                             <td>有无护堤</td>
                             <td><input type="checkbox" checked="checked" ></td>
                             <td>防护堤所围面积</td>
@@ -297,7 +302,7 @@
     </div>
     </div>
     <div id="two" class="tab-pane fade">
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
             <div class="panel-heading">
                 周边环境信息
             </div>

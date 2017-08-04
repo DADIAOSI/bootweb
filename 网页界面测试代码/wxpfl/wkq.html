@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="../../js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            尾矿区
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a href="#one" data-toggle="tab">尾矿区信息</a></li>
+                <li><a href="#two" data-toggle="tab">尾矿区周边环境</a></li>
+                <li><a href="#three" data-toggle="tab">地理位置</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="one" class="tab-pane fade active in">
+                    <div class="panel-body">
+                        <ul class="nav nav-pills btn-sm">
+                            <li class="active"><a href="#one_o" data-toggle="tab">基本信息一</a></li>
+                            <li><a href="#two_t" data-toggle="tab">基本信息二</a></li>
+                            <li><a href="#three_t" data-toggle="tab">基本信息三</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="one_o" class="tab-pane fade active in">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td>尾矿库编号</td>
+                                                <td></td>
+                                                <td>企业名称</td>
+                                                <td></td>
+                                                <td>主要负责人</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>详细地址</td>
+                                                <td></td>
+                                                <td>上级主管</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>联系电话</td>
+                                                <td></td>
+                                                <td>邮政编码</td>
+                                                <td></td>
+                                                <td>建厂日期</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>经济类型</td>
+                                                <td></td>
+                                                <td>从业人数</td>
+                                                <td></td>
+                                                <td>矿种</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>固定资产</td>
+                                                <td></td>
+                                                <td>年利润</td>
+                                                <td></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>尾矿库名称</td>
+                                                <td></td>
+                                                <td>已使用年限</td>
+                                                <td></td>
+                                                <td>地理位置</td>
+                                                <td></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>尾矿库形式</td>
+                                                <td></td>
+                                                <td>尾矿库等级</td>
+                                                <td></td>
+                                                <td>全库容</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>坝高</td>
+                                                <td></td>
+                                                <td>设计总坝高</td>
+                                                <td></td>
+                                                <td>设计总库容</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>坝长</td>
+                                                <td></td>
+                                                <td>最小干滩长度</td>
+                                                <td></td>
+                                                <td>沉积干滩平均坡度</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>尾矿库危害程度</td>
+                                                <td></td>
+                                                <td>尾矿库安全度分类</td>
+                                                <td></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="input-group">
+                                                        <input type="checkbox">
+                                                        库区有无滥伐滥垦滥牧现象
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">
+                                                    <div class="input-group">
+                                                        <input type="checkbox">
+                                                        库区是否处于岩溶或裂隙发育地区
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">
+                                                    <div class="input-group">
+                                                        <input type="checkbox">
+                                                        库区有无产生泥石流条件
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="input-group">
+                                                        <input type="checkbox">
+                                                        库区有无滑坡体
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">
+                                                    <div class="input-group">
+                                                        <input type="checkbox">
+                                                        库区失事是否会影响其他地区
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div id="edtbbtn1" class="btn-group btn-group-justified">
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">首页</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">末页</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="two_t" class="tab-pane fade">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td rowspan="2">初期坝</td>
+                                                <td>坝型</td>
+                                                <td></td>
+                                                <td>坝质类型</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>坝长</td>
+                                                <td></td>
+                                                <td>坝高</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="1">尾矿库防洪标准</td>
+                                                <td>初期</td>
+                                                <td></td>
+                                                <td>中后期</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>堆坝方法</td>
+                                                <td></td>
+                                                <td>汇水面积</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>堆高</td>
+                                                <td></td>
+                                                <td>尾矿库坝安全超高</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>尾矿库调洪库容</td>
+                                                <td></td>
+                                                <td>排洪系统的形式</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>尾矿比重</td>
+                                                <td></td>
+                                                <td>尾矿粒度</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>尾矿库的观测项目</td>
+                                                <td></td>
+                                                <td>尾矿库分级设备型号</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>数量</td>
+                                                <td></td>
+                                                <td>矿库坝的渗透情况</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>多年平均降水量</td>
+                                                <td></td>
+                                                <td>最大一日降水量</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>防洪坝是否满足要求</td>
+                                                <td></td>
+                                                <td>矿库坝的情况</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>最小安全超高要求</td>
+                                                <td></td>
+                                                <td>最小干滩长度要求</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>坝址区基本地震烈度</td>
+                                                <td></td>
+                                                <td>库区有无影响尾矿库的人为因素</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>该库评价</td>
+                                                <td colspan="3"><textarea class="form-control"></textarea></td>
+                                            </tr>
+                                        </table>
+                                        <div id="edtbbtn2" class="btn-group btn-group-justified">
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">首页</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">末页</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="three_t" class="tab-pane fade">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td>尾库矿的工作概况</td>
+                                                <td><textarea class="form-control"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>尾库矿出现的问题以及解决方法</td>
+                                                <td><textarea class="form-control"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>备注</td>
+                                                <td><textarea class="form-control"></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>记录日期</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>填表人</td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                        <div id="edtbbtn3" class="btn-group btn-group-justified">
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">首页</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button">末页</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="two" class="tab-pane fade">
+                    <div class="table-responsive" style="padding-top: 10px">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <td colspan="6">周边信息</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7">周边场所</td>
+                                <td>单位类型</td>
+                                <td>数量</td>
+                                <td>单位名称</td>
+                                <td>人数（个）</td>
+                                <td>距库区距离（米）</td>
+                            </tr>
+                            <tr>
+                                <td>住宅</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>生产单位</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>机关团体</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>公共场所</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>交通要道</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>其他</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div id="edtbbtn4" class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">首页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-step-backward"></span>上一条</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">下一条<span class="glyphicon glyphicon-step-forward"></span></button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button">末页</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span>新增</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-remove"></span>删除</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-pencil"></span>编辑</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-save"></span>保存</button>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-share-alt"></span>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="three" class="tab-pane fade">
+                    three
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

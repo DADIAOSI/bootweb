@@ -11,6 +11,7 @@ $("a[class='thumbnail']").click(function () {
             addtab(name);
             break;
         case 'kq':
+            addtab(name);
             break;
         case 'gygl':
             break;
@@ -50,7 +51,7 @@ $("a[class='thumbnail']").click(function () {
             $('#mytabs').append(html_tabname);
             $('#mytabcontent').append(html_tabcontent);
             $('#mytabs li:last a').tab('show');
-            $.get('usableHtmlfreg/wxpfl/cgq.html',function (data) {
+            $.get('usableHtmlfreg/wxpfl/'+$wxpflid+'.html',function (data) {
                 $('#'+tabname+'').empty().append(data);
                 // alert('ok!');
             });
