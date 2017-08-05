@@ -14,12 +14,16 @@ $("a[class='thumbnail']").click(function () {
             addtab(name);
             break;
         case 'gygl':
+            addtab(name);
             break;
         case 'wkq':
+            addtab(name);
             break;
         case 'ylgd':
+            addtab(name);
             break;
         case 'mk':
+            addtab(name);
             break;
         case 'jsk':
             break;
