@@ -26,10 +26,13 @@ $("a[class='thumbnail']").click(function () {
             addtab(name);
             break;
         case 'jsk':
+            addtab(name);
             break;
         case 'wxsccs':
+            addtab(name);
             break;
         case 'ylrq':
+            addtab(name);
             break;
         default:
             alert("你选的不是危险品分类图标！，属于代码问题！");
