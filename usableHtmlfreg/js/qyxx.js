@@ -1,12 +1,16 @@
 /**
  * Created by yujin on 17-7-24.
  */
+//提交按钮
 $('#tijiao').click(function () {
     var data= $('form').serialize();
     //提交表单汉子显示不明白，
+    $('form').submit(data);
     alert(data);
 });
 $('#formqyxx input').attr("readonly","readonly").css({"box-shadow": "none","background-color": "#fff","border": "none"});//事先指定为readonly状态
+
+//修改按钮
 $('#xiugai').click(function () {
     var $inputforro=$('#formqyxx input');
     var $bool=$inputforro.attr("readonly");
@@ -20,6 +24,8 @@ $('#xiugai').click(function () {
     };
 
 });
+
+//撤销按钮
 $('#chexiao').click(function () {
     var $inputforro=$('#formqyxx input');
     var $bool=$inputforro.attr("readonly");

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="../../js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            table加载数据
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a href="#one" data-toggle="tab">table1</a></li>
+                <li><a href="#two" data-toggle="tab">table2</a></li>
+                <li><a href="#three" data-toggle="tab">地理位置</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="one" class="tab-pane fade active in">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <form id="form1" action="#" name="form1name" method="post">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <td>ID1</td>
+                                        <td><input id="ID1" class="form-control" type="text"></td>
+                                        <td>ID2</td>
+                                        <td><input id="ID2" class="form-control" type="text"></td>
+                                        <td>ID3</td>
+                                        <td><input id="ID3" class="form-control" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ID4</td>
+                                        <td><input id="ID4" class="form-control" type="text"></td>
+                                        <td>ID5</td>
+                                        <td><input id="ID5" class="form-control" type="text"></td>
+                                        <td>ID6</td>
+                                        <td><input id="ID6" class="form-control" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ID7</td>
+                                        <td><input id="ID7" class="form-control" type="text"></td>
+                                        <td>ID8</td>
+                                        <td><input id="ID8" class="form-control" type="text"></td>
+                                        <td>ID9</td>
+                                        <td><input id="ID9" class="form-control" type="text" value=""></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <input id="tj" class="form-control btn btn-primary" type="button" value="获取json数据"><hr>
+                                <input class="form-control btn btn-primary" type="reset" value="重置">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="two" class="tab-pane fade">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <form id="form2" action="#" name="form1name" method="post">
+                                <table  class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <td>ID1</td>
+                                        <td><input id="ID11" class="form-control" type="text"></td>
+                                        <td>ID2</td>
+                                        <td><input id="ID22" class="form-control" type="text"></td>
+                                        <td>ID3</td>
+                                        <td><input id="ID33" class="form-control" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ID4</td>
+                                        <td><input id="ID44" class="form-control" type="text"></td>
+                                        <td>ID5</td>
+                                        <td><input id="ID55" class="form-control" type="text"></td>
+                                        <td>ID6</td>
+                                        <td><input id="ID66" class="form-control" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ID7</td>
+                                        <td><input id="ID77" class="form-control" type="text"></td>
+                                        <td>ID8</td>
+                                        <td><input id="ID88" class="form-control" type="text"></td>
+                                        <td>ID9</td>
+                                        <td><input id="ID99" class="form-control" type="text" value=""></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <input id="tj2" class="form-control btn btn-primary" type="button" value="获取json数据"><hr>
+                                <input class="form-control btn btn-primary" type="reset" value="重置">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="three" class="tab-pane fade">
+                    three
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $('#tj').click(function () {
+            $.getJSON('form.json',function (datajson) {
+                for( x in datajson.form1){
+                    //$('#'+x).val('');
+                    $('#'+x).val(datajson.form1[x]);
+                }
+
+            });
+        });
+        $('#tj2').click(function () {
+            $.getJSON('form.json',function (datajson) {
+                for( x in datajson.form2){
+                    //$('#'+x).val('');
+                    $('#'+x).val(datajson.form2[x]);
+                }
+
+            });
+        });
+
+
+    })
+</script>
+</html>

@@ -40,5 +40,8 @@ $(document).ready(function(){
         // $removetabcontent.remove();
 
     });
+    $('#tijiao').click(function () {
+        $('#formqyxx').submit()
+    });
 
 })
