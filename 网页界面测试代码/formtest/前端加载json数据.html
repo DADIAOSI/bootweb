@@ -24,7 +24,7 @@
                     <div class="panel-body">
                         <div class="table-responsive">
                             <form id="form1" action="#" name="form1name" method="post">
-                                <table class="table table-bordered">
+                                <table id="table1" class="table table-bordered">
                                     <tbody>
                                     <tr>
                                         <td>ID1</td>
@@ -108,8 +108,9 @@
 </body>
 <script>
     $(document).ready(function () {
+        //table1获取json数据事件
         $('#tj').click(function () {
-            $.getJSON('form.json',function (datajson) {
+            $.getJSON('form.json',{"tablename":$('#table1').attr('id')},function (datajson) {     // 获取数据地址,发送要获取的table的名称（即ID值),回调函数处理接收的数据
                 for( x in datajson.form1){
                     //$('#'+x).val('');
                     $('#'+x).val(datajson.form1[x]);
