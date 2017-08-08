@@ -6,6 +6,14 @@
     <script src="../../js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <script src="../../js/bootstrap.min.js"></script>
+    <style>
+        .inphid{
+            background-color: #fff;
+            box-shadow: none;
+            border: none;
+
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -54,6 +62,34 @@
                                 </table>
                                 <input id="tj" class="form-control btn btn-primary" type="button" value="获取json数据"><hr>
                                 <input class="form-control btn btn-primary" type="reset" value="重置">
+                            </form><hr>
+                            <form>
+                                <table id="table3" class="table table-bordered">
+                                    <tbody>
+                                    <tr>
+                                        <td>item</td>
+                                        <td id="IDA"></td>
+                                        <td>item</td>
+                                        <td id="IDB"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>item</td>
+                                        <td id="IDC"></td>
+                                        <td>item</td>
+                                        <td id="IDD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>item</td>
+                                        <td id="IDE"></td>
+                                        <td>item</td>
+                                        <td id="IDF"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <input type="button" class="form-control" id="tdtext" value="getJson"><hr>
+                                <input type="button" class="form-control" id="addinput" value="emptyTd">
+                                <!--<button class="btn btn-primary" id="tdtext2">td值</button>-->
+                                <!--<button class="btn btn-primary" id="addinput">插入input</button>-->
                             </form>
                         </div>
                     </div>
@@ -97,6 +133,27 @@
                         </div>
                     </div>
                 </div>
+                <form>
+                    <table id="table4" class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <td>item</td>
+                            <td><input type="text" readonly="readonly" class="form-control inphid" ></td>
+                            <td>item</td>
+                            <td><input type="text" readonly="readonly" class="form-control inphid" ></td>
+                        </tr>
+                        <tr>
+                            <td>item</td>
+                            <td><input type="text" readonly="readonly" class="form-control inphid" ></td>
+                            <td>item</td>
+                            <td><input type="text" readonly="readonly" class="form-control inphid" ></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <input class="form-control btn btn-primary" type="button" id="bj" value="编辑">
+                </form>
+
+
                 <div id="three" class="tab-pane fade">
                     three
                 </div>
@@ -119,7 +176,7 @@
             });
         });
         $('#tj2').click(function () {
-            $.getJSON('form.json',function (datajson) {
+            $.getJSON('form.json',{"tablename":$('#table2').attr('id')},function (datajson) {
                 for( x in datajson.form2){
                     //$('#'+x).val('');
                     $('#'+x).val(datajson.form2[x]);
@@ -127,7 +184,26 @@
 
             });
         });
+        //利用input type="button" 对有ID的td进行数据的添加，但不知为何利用button标签绑定事件却不行，会先加载在清空。
+        $('#tdtext').click(function () {
+            $.getJSON('form.json',function (datajson) {
+                for(x in datajson.form3){
+                    $('#'+x).empty().append(datajson.form3[x]);
+                };
+            });
+        });
+        //清空td数据
+        $('#addinput').click(function () {
+            var $td=$("#table3 td[id^='ID']");
+            alert($td.length);
+            $td.empty().append("<input type='text' class='form-control'>");
 
+        });
+        //编辑样式切换
+        $('#bj').click(function () {
+            var $td=$("#table4 input");
+            $td.removeClass('inphid').removeAttr('readonly');
+        });
 
     })
 </script>
